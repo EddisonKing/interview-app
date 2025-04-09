@@ -34,7 +34,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run Snyk Vulnerability Scan
-        uses: snyk/actions@0.4.0
+        uses: snyk/actions/golang@master
 
   build-and-test:
     name: Build & Unit Test

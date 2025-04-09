@@ -19,12 +19,20 @@ jobs:
     name: GitLeaks Scan
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Run GitLeaks
         uses: gitleaks/gitleaks-action@v2.3.4
   snyk:
     name: Snyk Scan
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Run Snyk Vulnerability Scan
         uses: snyk/actions@0.4.0
 

@@ -97,10 +97,10 @@ jobs:
     name: Deploy to Prod
     runs-on: ubuntu-latest
     needs: [ owasp-zap, nikto ]
-    environment: staging
+    environment: production 
     steps:
-      - name: Deploy Application to Staging
+      - name: Deploy Application to Production
         run: |
-          echo "Deploying to staging..."
+          echo "Deploying to Production..."
           # This is a placeholder for a real deployment
       
